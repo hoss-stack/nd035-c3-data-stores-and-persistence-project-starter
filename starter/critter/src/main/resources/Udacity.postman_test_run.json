@@ -1,0 +1,421 @@
+{
+	"id": "5d7e1cf4-3684-40b8-9bb5-761919ecd7e3",
+	"name": "Udacity",
+	"timestamp": "2022-07-12T21:44:07.207Z",
+	"collection_id": "15017875-88b73374-ab63-467b-b788-25899e6c5ebb",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 13,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "e9db3928-d405-4cbd-842c-c3cf70b46667",
+			"name": "Save Customer",
+			"url": "http://localhost:8082/user/customer",
+			"time": 899,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				899
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "27381f1f-ae80-450f-b94d-c2192c2262a4",
+			"name": "Save Pet",
+			"url": "http://localhost:8082/pet",
+			"time": 703,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				703
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "e6383ff2-fcc7-4db9-9c53-d4423018cff6",
+			"name": "Save Employee",
+			"url": "http://localhost:8082/user/employee",
+			"time": 489,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				489
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "a94a332a-cb1b-4f49-b825-a7b033b32629",
+			"name": "Add Employee Schedule",
+			"url": "http://localhost:8082/user/employee/1",
+			"time": 580,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				580
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "39d9e15c-afa0-475e-a529-1a8454ee29f1",
+			"name": "Check Availability",
+			"url": "http://localhost:8082/user/employee/availability",
+			"time": 95,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				95
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "bbca29b2-36a3-471e-a9c5-33f5a7be4a06",
+			"name": "Create Schedule",
+			"url": "http://localhost:8082/schedule",
+			"time": 810,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				810
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "9f648a86-9338-413d-a569-853239f2acb3",
+			"name": "Find Schedule By Pet",
+			"url": "http://localhost:8082/schedule/pet/1",
+			"time": 23,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				23
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "8d061c07-9435-4219-b6af-18a7ac5f9ac9",
+			"name": "Find Schedule By Employee",
+			"url": "http://localhost:8082/schedule/employee/1",
+			"time": 21,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				21
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "bdb78094-549d-4c1d-91f1-33b632736921",
+			"name": "Find Schedule By Owner",
+			"url": "http://localhost:8082/schedule/customer/1",
+			"time": 18,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				18
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "df3efa5c-9e1b-473c-a190-64e7b83440ba",
+			"name": "Get All Customers",
+			"url": "http://localhost:8082/user/customer",
+			"time": 12,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "763041c5-9c5d-4ba4-9a3f-04e25784d859",
+			"name": "Get All Pets",
+			"url": "http://localhost:8082/pet",
+			"time": 15,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				15
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "10c62f57-9170-455b-b2d0-c23042ab5385",
+			"name": "Get Pets By Owner",
+			"url": "http://localhost:8082/pet/owner/1",
+			"time": 13,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				13
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "c4c892e9-892e-43a8-aa7d-7db63e0e947e",
+			"name": "Get Owner By Pet",
+			"url": "http://localhost:8082/user/customer/pet/1",
+			"time": 13,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				13
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 3691,
+	"collection": {
+		"requests": [
+			{
+				"id": "e9db3928-d405-4cbd-842c-c3cf70b46667",
+				"method": "POST"
+			},
+			{
+				"id": "27381f1f-ae80-450f-b94d-c2192c2262a4",
+				"method": "POST"
+			},
+			{
+				"id": "e6383ff2-fcc7-4db9-9c53-d4423018cff6",
+				"method": "POST"
+			},
+			{
+				"id": "a94a332a-cb1b-4f49-b825-a7b033b32629",
+				"method": "PUT"
+			},
+			{
+				"id": "39d9e15c-afa0-475e-a529-1a8454ee29f1",
+				"method": "GET"
+			},
+			{
+				"id": "bbca29b2-36a3-471e-a9c5-33f5a7be4a06",
+				"method": "POST"
+			},
+			{
+				"id": "9f648a86-9338-413d-a569-853239f2acb3",
+				"method": "GET"
+			},
+			{
+				"id": "8d061c07-9435-4219-b6af-18a7ac5f9ac9",
+				"method": "GET"
+			},
+			{
+				"id": "bdb78094-549d-4c1d-91f1-33b632736921",
+				"method": "GET"
+			},
+			{
+				"id": "df3efa5c-9e1b-473c-a190-64e7b83440ba",
+				"method": "GET"
+			},
+			{
+				"id": "763041c5-9c5d-4ba4-9a3f-04e25784d859",
+				"method": "GET"
+			},
+			{
+				"id": "10c62f57-9170-455b-b2d0-c23042ab5385",
+				"method": "GET"
+			},
+			{
+				"id": "c4c892e9-892e-43a8-aa7d-7db63e0e947e",
+				"method": "GET"
+			}
+		]
+	}
+}

@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.validation.constraints.AssertTrue;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.List;
@@ -46,7 +47,15 @@ public class CritterFunctionalTest {
     public void testCreateCustomer(){
         CustomerDTO customerDTO = createCustomerDTO();
         CustomerDTO newCustomer = userController.saveCustomer(customerDTO);
-        CustomerDTO retrievedCustomer = userController.getAllCustomers().get(0);
+        List<CustomerDTO> retrievedCustomers = userController.getAllCustomers();
+        CustomerDTO retrievedCustomer = null;
+        for(CustomerDTO customer : retrievedCustomers) {
+            if(customer.getId() == newCustomer.getId())
+            {
+                retrievedCustomer = customer;
+            }
+        }
+        Assertions.assertTrue(retrievedCustomer != null);
         Assertions.assertEquals(newCustomer.getName(), customerDTO.getName());
         Assertions.assertEquals(newCustomer.getId(), retrievedCustomer.getId());
         Assertions.assertTrue(retrievedCustomer.getId() > 0);
@@ -82,8 +91,15 @@ public class CritterFunctionalTest {
         Assertions.assertEquals(newPet.getName(), pets.get(0).getName());
 
         //check to make sure customer now also contains pet
-        CustomerDTO retrievedCustomer = userController.getAllCustomers().get(0);
-        Assertions.assertTrue(retrievedCustomer.getPetIds() != null && retrievedCustomer.getPetIds().size() > 0);
+        List<CustomerDTO> retrievedCustomers = userController.getAllCustomers();
+        CustomerDTO retrievedCustomer = null;
+        for(CustomerDTO customer : retrievedCustomers) {
+            if(customer.getId() == newCustomer.getId())
+            {
+                retrievedCustomer = customer;
+            }
+        }
+        Assertions.assertTrue(retrievedCustomer != null && retrievedCustomer.getPetIds() != null && retrievedCustomer.getPetIds().size() > 0);
         Assertions.assertEquals(retrievedCustomer.getPetIds().get(0), retrievedPet.getId());
     }
 
@@ -184,9 +200,17 @@ public class CritterFunctionalTest {
         List<Long> employeeList = Lists.newArrayList(employeeDTO.getId());
         Set<EmployeeSkill> skillSet =  Sets.newHashSet(EmployeeSkill.PETTING);
 
-        scheduleController.createSchedule(createScheduleDTO(petList, employeeList, date, skillSet));
-        ScheduleDTO scheduleDTO = scheduleController.getAllSchedules().get(0);
+        ScheduleDTO newSchedule = scheduleController.createSchedule(createScheduleDTO(petList, employeeList, date, skillSet));
+        List<ScheduleDTO> scheduleDTOs = scheduleController.getAllSchedules();
+        ScheduleDTO scheduleDTO = null;
+        for(ScheduleDTO schedule : scheduleDTOs) {
+            if(schedule.getId() == newSchedule.getId())
+            {
+                scheduleDTO = schedule;
+            }
+        }
 
+        Assertions.assertTrue(scheduleDTO != null);
         Assertions.assertEquals(scheduleDTO.getActivities(), skillSet);
         Assertions.assertEquals(scheduleDTO.getDate(), date);
         Assertions.assertEquals(scheduleDTO.getEmployeeIds(), employeeList);
